@@ -1,0 +1,22 @@
+tickets = int(input("Введите количество необходимых билетов: "))
+person = tickets
+cash = 0
+while person != 0:
+    age_of_ticket = int(input(f"Укажите возраст посетителя № {person}" ))
+    if age_of_ticket < 18:
+        print ("Билет для посетителя №: - ", person," бесплатный")
+    elif 25 > age_of_ticket > 18:
+        cash += 990
+        print ("Стоимость билета для посетителя №: - ", person, " 990 руб.")
+    else:
+        cash += 1390
+        print("Стоимость билета для посетителя №: - ", person, " 1390 руб.")
+    person -=1
+
+if tickets > 3:
+    sale = cash - cash * 0.10
+    print(f"Сумма заказа: {cash}")
+    print(f"Скидака за покупку более 3х билетов -10%.\nИтого: {sale}")
+else:
+    print(f"Итого: {cash}")
+
